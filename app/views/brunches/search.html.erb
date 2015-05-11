@@ -2,12 +2,11 @@
 <%= @brunch_search %>
 
 <%=["businesses"].map{|business| business["name"]}%> -->
-
-	<h1> The Brunchinator </h1>
-
 		<% @brunch_search.businesses.each do |brunches| %>
 
-					<a href="<%= brunches.url %>"> <%= brunches.name %> </a>
+					<h1><a href="<%= brunches.url %>"> <%= brunches.name %> </a></h1>
+					<img src = "<%= brunches.rating_img_url_large %>">
+					<%= brunches.review_count %> reviews
 					<br>
 					<%= brunches.location.display_address[0] %>
 					<br>
@@ -17,12 +16,6 @@
 					<br>
 					<h4> Neighborhood: </h4>
 					<%= brunches.location.neighborhoods[0] %>
-					<br>
-					<h4> Rating: </h4>
-					<%= brunches.rating %>
-					<br>
-					<img src = "<%= brunches.rating_img_url %>">
-
 				<br>
 		<% end %>
 		<%= link_to '<button type="button">Search Again</button>'.html_safe, root_path %>
