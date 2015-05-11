@@ -18,8 +18,8 @@
 		<img src="http://s3-media1.fl.yelpcdn.com/assets/2/www/img/14f29ad24935/map/miniMapLogo.png">
 
 
-		<%= form_tag '/favorites', method: :post do %>
-		    <%= hidden_field_tag(:search, params[:search]) %>
+		<%= form_for Favorite.new(name: @brunch.name), method: :post do |fav| %>
+		    <%= fav.hidden_field(:name) %>
 		    <%= submit_tag 'Save to Favorites', data: { confirm: "Saved to Favorites! Go to My Favorites to see your Favorite Brunch Spots"}, :class => "favoriteBtn" %>
 
 		  <% end %>

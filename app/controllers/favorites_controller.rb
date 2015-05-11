@@ -2,7 +2,7 @@ class FavoritesController < ApplicationController
   before_action :authenticate_user!
 
   def index
-   @favorites = Favorites.all
+   @favorites = Favorite.all
   end
 
   def show
@@ -10,11 +10,12 @@ class FavoritesController < ApplicationController
   end
 
   def create
-    @favorite = Favorite.create(:name => @brunch)
-    #render json: @favorite
-    # @favorite = Favorite.create(:name => params[:location])
-    # redirect_to(:back)
 
+    # @favorite = Favorite.create(favorite_params)
+
+    @favorite = Favorite.create(favorite_params)
+    #render json: @favorite
+     redirect_to(favorites_url)
   end
 
   def edit
@@ -40,7 +41,7 @@ class FavoritesController < ApplicationController
   private
 
   def favorite_params
-        params.require(:favorite).permit(:name)
-      end
+    params.require(:favorite).permit(:name)
+  end
 
 end

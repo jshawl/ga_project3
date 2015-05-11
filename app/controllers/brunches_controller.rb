@@ -14,6 +14,7 @@ class BrunchesController < ApplicationController
 	  parameters = { category_filter: 'breakfast_brunch', limit: 10 }
     @brunch_search = Yelp.client.search( location, parameters )
 		@brunch = @brunch_search.businesses.sample
+		
     # render json: @brunch
 	end
 
