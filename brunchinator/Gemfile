@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
-
+#devise gem
+gem 'devise'
 #yelp API
 gem 'yelp', require: 'yelp'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

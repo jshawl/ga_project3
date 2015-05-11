@@ -1,0 +1,14 @@
+
+<!-- <h2><%= @place.location.split.map(&:capitalize).join(' ') %></h2> -->
+
+<!-- <%= image_tag "https://maps.googleapis.com/maps/api/staticmap?center=#{@place.location}&zoom=14&size=400x400"%>
+<a href="/search?utf8=✓&search=<%= @place.location.gsub(/\s/,'+') %>&commit=Search"><h3>View Photos For This Place</h3></a> -->
+
+
+
+<%= link_to "Edit Name", edit_favorite_path(@favorite) %>
+<br>
+<%= link_to "Delete From Favorites", favorite_path(@favorite), method: :delete, confirm: true%>
+
+<br>
+<%= link_to "Go Back", :back %>
