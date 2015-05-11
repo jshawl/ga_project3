@@ -11,9 +11,10 @@ class BrunchesController < ApplicationController
 		# would rather use neighborhood than zipcode here...
 		location = params[:location]
 
-	  parameters = { category_filter: 'breakfast_brunch', limit: 1 }
+	  parameters = { category_filter: 'breakfast_brunch', limit: 10 }
     @brunch_search = Yelp.client.search( location, parameters )
-    # render json: @brunch_search
+		@brunch = @brunch_search.businesses.sample
+    # render json: @brunch
 	end
 
 end
