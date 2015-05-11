@@ -1,4 +1,4 @@
-<%= form_tag("/search", method: "POST") do %>
+<%= form_tag("/search", method: "POST", :remote=> true) do %>
   <div class="searchtag">
   	<%= label_tag(:location, "Enter zip or city/state:") %>
   </div>
