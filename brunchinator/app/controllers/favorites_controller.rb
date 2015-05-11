@@ -10,11 +10,7 @@ class FavoritesController < ApplicationController
   end
 
   def create
-
-    # @favorite = Favorite.create(favorite_params)
-
     @favorite = Favorite.create(favorite_params)
-    #render json: @favorite
      redirect_to(favorites_url)
   end
 
@@ -31,11 +27,10 @@ class FavoritesController < ApplicationController
     end
   end
 
-
   def destroy
     @favorite = Favorite.find(params[:id])
     @favorite.destroy
-    #redirect_to ("/users/show")
+    redirect_to ("/favorites")
   end
 
   private
