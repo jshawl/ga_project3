@@ -1,25 +1,17 @@
-<!-- <%= @brunch_search.businesses[0].name %>
-<%= @brunch_search %>
+<div class="search-result">
+<h1><a href="<%= @brunch.url %>"> <%= @brunch.name %> </a></h1>
+  <img src = "<%= @brunch.rating_img_url_large %>">
+  <%= @brunch.review_count %> reviews
+  <br>
+  <%= @brunch.location.display_address[0] %>
+  <br>
+  <%= @brunch.location.city %>, <%= @brunch.location.state_code %> <%= @brunch.location.postal_code %>
+  <br>
+  <%= @brunch.display_phone %>
+  <br>
+</div>
 
-<%=["businesses"].map{|business| business["name"]}%> -->
-      <h1><a href="<%= @brunch.url %>"> <%= @brunch.name %> </a></h1>
-      <img src = "<%= @brunch.rating_img_url_large %>">
-      <%= @brunch.review_count %> reviews
-      <br>
-      <%= @brunch.location.display_address[0] %>
-      <br>
-      <%= @brunch.location.city %>, <%= @brunch.location.state_code %> <%= @brunch.location.postal_code %>
-      <br>
-      <%= @brunch.display_phone %>
-      <br>
-
-		<%= link_to '<button type="button">Go Home to Search Again</button>'.html_safe, root_path %>
-
-		<img src="http://s3-media1.fl.yelpcdn.com/assets/2/www/img/14f29ad24935/map/miniMapLogo.png">
-
-
-		<%= form_for Favorite.new(name: @brunch.name), method: :post do |fav| %>
-		    <%= fav.hidden_field(:name) %>
-		    <%= submit_tag 'Save to Favorites', data: { confirm: "Saved to Favorites! Go to My Favorites to see your Favorite Brunch Spots"}, :class => "favoriteBtn" %>
-
-		  <% end %>
+<%= form_for Favorite.new(name: @brunch.name), method: :post do |fav| %>
+    <%= fav.hidden_field(:name) %>
+	  <%= submit_tag 'Save to Favorites', data: { confirm: "Saved to Favorites! Go to My Favorites to see your Favorite Brunch Spots"}, :class => "favoriteBtn" %>
+<% end %>
