@@ -1,20 +1,22 @@
-<div class="search-result">
-<h1><a href="<%= @brunch.url %>"> <%= @brunch.name %> </a></h1>
-	<img src = "<%=	@brunch.image_url %>">
-	<br>
-  <img src = "<%= @brunch.rating_img_url_large %>">
-	<br>
-	<%= @brunch.review_count %> reviews
-  <br>
-  <%= @brunch.location.display_address[0] %>
-  <br>
-  <%= @brunch.location.city %>, <%= @brunch.location.state_code %> <%= @brunch.location.postal_code %>
-  <br>
-  <%= @brunch.display_phone %>
-  <br>
-</div>
+<div class="search-index">
+	<div class="search-result">
+		<h1><a href="<%= @brunch.url %>"> <%= @brunch.name %> </a></h1>
+		<img src = "<%=	@brunch.image_url %>">
+		<br>
+  	<img src = "<%= @brunch.rating_img_url_large %>">
+		<br>
+		<%= @brunch.review_count %> reviews
+  	<br>
+  	<%= @brunch.location.display_address[0] %>
+  	<br>
+  	<%= @brunch.location.city %>, <%= @brunch.location.state_code %> <%= @brunch.location.postal_code %>
+  	<br>
+  	<%= @brunch.display_phone %>
+  	<br>
 
-<%= form_for Favorite.new(name: @brunch.name), method: :post do |fav| %>
+		<%= form_for Favorite.new(name: @brunch.name), method: :post do |fav| %>
     <%= fav.hidden_field(:name) %>
 	  <%= submit_tag 'Save to Favorites', data: { confirm: "Saved to Favorites! Go to My Favorites to see your Favorite Brunch Spots"}, :class => "favoriteBtn" %>
-<% end %>
+		<% end %>
+	</div>
+</div>

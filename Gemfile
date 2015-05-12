@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+#figaro to hide
+gem 'figaro'
 #devise gem
 gem 'devise'
 #yelp API

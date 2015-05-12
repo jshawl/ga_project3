@@ -9,7 +9,7 @@
 <body class="site">
   <!-- Navigation bar: -->
   <ul class="navigation">
-    <li><a href="#">The Brunchinator</a></li>
+    <li><a href="#">THE BRUNCHINATOR</a></li>
     <li><a href="#">Home</a></li>
     <li><a href="#">My Favorites</a></li>
     <li><a href="#">Log In</a></li>
@@ -22,17 +22,14 @@
   <p class="alert alert-danger"><%= alert %></p>
 <% end %>
 
-<%= yield %>
-
 <main class="site-content">
+  <%= yield %>
 </main>
-
 
 <footer class="site-footer">
   Powered by Yelp!
   <img src="http://s3-media1.fl.yelpcdn.com/assets/2/www/img/14f29ad24935/map/miniMapLogo.png">
   <%= link_to '<button type="button">Go Home to Search Again</button>'.html_safe, root_path %>
 </footer>
-
 </body>
 </html>

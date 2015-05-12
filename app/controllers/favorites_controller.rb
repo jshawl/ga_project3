@@ -10,6 +10,7 @@ class FavoritesController < ApplicationController
   end
 
   def create
+    # NEED TO MAKE THE CREATE SAVE FOR THE CURRENT USER
     @favorite = Favorite.create(favorite_params)
      redirect_to(favorites_url)
   end
