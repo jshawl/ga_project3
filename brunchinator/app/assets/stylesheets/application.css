@@ -61,22 +61,62 @@
   }
 }
 
+.site-footer{
+  background: deepskyblue;
+  color: white;
+}
+
 .site {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+  font-family:Verdana, Geneva, sans-serif
 }
 
 .site-content {
   flex: 1;
+  background-image: url("https://cravedfw.files.wordpress.com/2015/02/pancake1.jpg");
+  background-size:cover;
+  background-postion:center center;
+  background-repeat: no-repeat;
 }
 
-.search-aligner {
+.search-index{
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+.searcher{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align:center;
+  background-color:rgba(0,0,0,0.6);
+  color:white;
+}
 .search-result {
+  /*background-image: url("http://web-images.chacha.com/images/Gallery/4576/facts-about-serving-sizes1507089234-sep-2-2012-1-600x558.jpg");*/
+  background-position: center;
+  background-color: rgba(255,255,255,0.7);
+  /*background: yellow;*/
   max-width: 50%;
+  /*border-style: solid;
+  border-width: 5px;*/
+  border-radius:10px;
+  padding-top: 25px;
+  padding-right: 50px;
+  padding-bottom: 25px;
+  padding-left: 50px;
+  text-align:center
+}
+
+.textfield button{
+  background: #ff6600;
+  color: white;
+  height: 50;
+  width: 300px;
+  border:0;
+  border-radius:5px;
+  font-size: 15px;
 }
