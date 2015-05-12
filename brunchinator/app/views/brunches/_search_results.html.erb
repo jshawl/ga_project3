@@ -1,7 +1,10 @@
 <div class="search-result">
 <h1><a href="<%= @brunch.url %>"> <%= @brunch.name %> </a></h1>
+	<img src = "<%=	@brunch.image_url %>">
+	<br>
   <img src = "<%= @brunch.rating_img_url_large %>">
-  <%= @brunch.review_count %> reviews
+	<br>
+	<%= @brunch.review_count %> reviews
   <br>
   <%= @brunch.location.display_address[0] %>
   <br>
