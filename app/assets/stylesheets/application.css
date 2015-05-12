@@ -98,8 +98,8 @@
   align-items: center;
   justify-content: center;
   text-align:center;
-  background-color:rgba(0,0,0,0.6);
-  color:white;
+  /*background-color:rgba(0,0,0,0.6);*/
+  /*color:white;*/
 }
 .search-result {
   /*background-image: url("http://web-images.chacha.com/images/Gallery/4576/facts-about-serving-sizes1507089234-sep-2-2012-1-600x558.jpg");*/

@@ -1,7 +1,7 @@
-<div class="search-index">
+
 	<div class="search-result">
 		<h1><a href="<%= @brunch.url %>"> <%= @brunch.name %> </a></h1>
-		<img src = "<%=	@brunch.image_url %>">
+		<!-- <img src = "<%=	@brunch.image_url %>"> -->
 		<br>
   	<img src = "<%= @brunch.rating_img_url_large %>">
 		<br>
@@ -19,4 +19,3 @@
 	  <%= submit_tag 'Save to Favorites', data: { confirm: "Saved to Favorites! Go to My Favorites to see your Favorite Brunch Spots"}, :class => "favoriteBtn" %>
 		<% end %>
 	</div>
-</div>
