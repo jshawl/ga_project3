@@ -11,7 +11,7 @@ class BrunchesController < ApplicationController
 	  parameters = { category_filter: 'breakfast_brunch' }
     @brunch_search = Yelp.client.search( location, parameters )
 		@brunch = @brunch_search.businesses.sample
-		@favorite = Favorite.new(name: @brunch.name)
+		@favorite = Favorite.new(name: @brunch.name, url: @brunch.url)
 	end
 
 end

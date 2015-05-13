@@ -14,6 +14,7 @@ class FavoritesController < ApplicationController
   @favorite = current_user.favorites.new(favorite_params)
     if @favorite.save
       redirect_to(favorites_path)
+      # redirect_to(:back)
     else
       render 'new'
     end
@@ -45,7 +46,7 @@ class FavoritesController < ApplicationController
   private
 
   def favorite_params
-    params.require(:favorite).permit(:name)
+    params.require(:favorite).permit(:name, :url)
   end
 
 end

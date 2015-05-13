@@ -1,5 +1,7 @@
 <%= @favorite.name %>
 <br>
+<%= @favorite.url %>
+<br>
 <%= link_to "Edit Name", edit_favorite_path(@favorite) %>
 <br>
 <%= link_to "Delete From Favorites", favorite_path(@favorite), method: :delete, confirm: true%>
