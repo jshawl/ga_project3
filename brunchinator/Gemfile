@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
-#figaro to hide
+#heroku deployment
+gem 'rails_12factor', group: :production
+#figaro to hide API keys
 gem 'figaro'
 #devise gem
 gem 'devise'
