@@ -19,9 +19,6 @@ class FavoritesController < ApplicationController
       render 'new'
     end
   end
-    # NEED TO MAKE THE CREATE SAVE FOR THE CURRENT USER
-    # @favorite = Favorite.create(favorite_params)
-    #  redirect_to(favorites_url)
 
 
   def edit
