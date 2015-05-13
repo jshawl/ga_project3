@@ -70,6 +70,8 @@
 .site-footer{
   background: deepskyblue;
   color: white;
+  padding: 7px;
+  text-align: right;
 }
 
 .site {

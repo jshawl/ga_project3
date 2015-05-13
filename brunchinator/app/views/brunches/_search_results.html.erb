@@ -14,7 +14,7 @@
   	<%= @brunch.display_phone %>
   	<br>
 
-		<%= form_for Favorite.new(name: @brunch.name), method: :post do |fav| %>
+		<%= form_for @favorite do |fav| %>
     <%= fav.hidden_field(:name) %>
 	  <%= submit_tag 'Save to Favorites', data: { confirm: "Saved to Favorites! Go to My Favorites to see your Favorite Brunch Spots"}, :class => "favoriteBtn" %>
 		<% end %>
