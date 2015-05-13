@@ -1,10 +1,18 @@
-<%= @favorite.name %>
+<div class="favorite-show">
+<h1><a href="<%= @favorite.url %>"> <%= @favorite.name %> </a></h1>
+<img src = "<%= @favorite.rating %>">
+<%= @favorite.reviews %> reviews
 <br>
-<%= @favorite.url %>
+<%= @favorite.address %>
 <br>
+<%= @favorite.phone %>
+<br>
+
 <%= link_to "Edit Name", edit_favorite_path(@favorite) %>
 <br>
 <%= link_to "Delete From Favorites", favorite_path(@favorite), method: :delete, confirm: true%>
 
 <br>
 <%= link_to "Go Back", :back %>
+
+</div>
