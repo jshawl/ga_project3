@@ -17,6 +17,10 @@
 		<%= form_for @favorite do |fav| %>
     <%= fav.hidden_field(:name) %>
 		<%= fav.hidden_field(:url) %>
+		<%= fav.hidden_field(:rating) %>
+		<%= fav.hidden_field(:reviews) %>
+		<%= fav.hidden_field(:address) %>
+		<%= fav.hidden_field(:phone) %>
 	  <%= submit_tag 'Save to Favorites', data: { confirm: "Saved to Favorites! Go to My Favorites to see your Favorite Brunch Spots"}, :class => "favoriteBtn" %>
 		<% end %>
 	</div>

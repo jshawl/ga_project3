@@ -128,3 +128,10 @@
   border-radius:5px;
   font-size: 20px;
 }
+
+.favorite-show {
+  padding-top: 25px;
+  padding-right: 50px;
+  padding-bottom: 25px;
+  padding-left: 50px;
+}
