@@ -1,0 +1,19 @@
+<script>
+$(document).ready(function(){
+  $(".alert").fadeOut(1000);
+});
+</script>
+<div class="searcher">
+<%= form_tag("/search", method: "POST", :remote=> true) do %>
+  <div class="searchtag">
+  	<%= label_tag(:location, "Enter zip or city/state:") %>
+  </div>
+
+  <div class="textfield">
+  	<%= text_field_tag :location %>
+  	<br>
+  	<%= button_tag ("FIND ME BRUNCH") %>
+  </div>
+
+<% end %>
+</div>

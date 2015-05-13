@@ -1,0 +1,18 @@
+<h2>Edit Favorite</h2>
+
+<% if @favorite.errors.any? %>
+  <ul>
+  <% @favorite.errors.full_messages.each do |error| %>
+    <li> <%= error %></li>
+  <%end%>
+  </ul>
+<% end %>
+
+<%= form_for @favorite do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.submit %>
+
+<%end %>

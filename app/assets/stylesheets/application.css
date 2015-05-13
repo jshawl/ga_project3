@@ -1,0 +1,137 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ body
+{
+  margin:0;
+}
+
+ .navigation {
+  list-style: none;
+  margin: 0;
+  background: deepskyblue;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  justify-content: flex-start;
+}
+
+.navigation a {
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  color: white;
+}
+
+.navigation a:hover {
+  background: #00b7f5;
+}
+
+@media all and (max-width: 800px) {
+  .navigation {
+    justify-content: space-around;
+  }
+}
+@media all and (max-width: 600px) {
+  .navigation {
+    -webkit-flex-flow: column wrap;
+    flex-flow: column wrap;
+    padding: 0;
+  }
+
+  .navigation a {
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .navigation li:last-of-type a {
+    border-bottom: none;
+  }
+}
+
+.site-footer{
+  background: deepskyblue;
+  color: white;
+  padding: 7px;
+  text-align: right;
+}
+
+.site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  font-family:Verdana, Geneva, sans-serif
+}
+
+.site-content {
+  flex: 1;
+  background-image: url("https://cravedfw.files.wordpress.com/2015/02/pancake1.jpg");
+  background-size:cover;
+  background-postion:center center;
+  background-repeat: no-repeat;
+}
+
+.search-index{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.searcher{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align:center;
+  /*background-color:rgba(0,0,0,0.6);*/
+  /*color:white;*/
+}
+.search-result {
+  /*background-image: url("http://web-images.chacha.com/images/Gallery/4576/facts-about-serving-sizes1507089234-sep-2-2012-1-600x558.jpg");*/
+  background-position: center;
+  background-color: rgba(255,255,255,0.7);
+  /*background: yellow;*/
+  max-width: 50%;
+  /*border-style: solid;
+  border-width: 5px;*/
+  border-radius:10px;
+  padding-top: 25px;
+  padding-right: 50px;
+  padding-bottom: 25px;
+  padding-left: 50px;
+  text-align:center
+}
+
+.textfield button{
+  background: #ff6600;
+  color: white;
+  height: 200;
+  width: 300px;
+  border:0;
+  border-radius:5px;
+  font-size: 20px;
+}
+
+.favorite-show {
+  padding-top: 25px;
+  padding-right: 50px;
+  padding-bottom: 25px;
+  padding-left: 50px;
+}
