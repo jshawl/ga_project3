@@ -2,7 +2,8 @@ class FavoritesController < ApplicationController
   before_action :authenticate_user!
 
   def index
-   @favorites = Favorite.all
+   @favorites = current_user.favorites
+  #  @favorites = Favorite.all
   end
 
   def show
@@ -10,10 +11,17 @@ class FavoritesController < ApplicationController
   end
 
   def create
-    # NEED TO MAKE THE CREATE SAVE FOR THE CURRENT USER
-    @favorite = Favorite.create(favorite_params)
-     redirect_to(favorites_url)
+  @favorite = current_user.favorites.new(favorite_params)
+    if @favorite.save
+      redirect_to(favorites_path)
+    else
+      render 'new'
+    end
   end
+    # NEED TO MAKE THE CREATE SAVE FOR THE CURRENT USER
+    # @favorite = Favorite.create(favorite_params)
+    #  redirect_to(favorites_url)
+
 
   def edit
     @favorite = Favorite.find(params[:id])

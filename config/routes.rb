@@ -8,7 +8,9 @@ Rails.application.routes.draw do
   root 'brunches#index'
   #resources :brunches
   post '/search' => 'brunches#search'
+
   resources :favorites
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
