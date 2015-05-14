@@ -2,7 +2,7 @@
 
 <ul>
   <% @favorites.each do |favorite| %>
-    <li><%= link_to favorite.name, favorite_path(favorite) %></li>
+    <!-- <li><%= link_to favorite.name, favorite_path(favorite) %></li> -->
     <li><a href="/favorites/<%=favorite.id%>" target="_blank" class="livepreview"><%=favorite.name%></a></li>
   <% end %>
 </ul>
@@ -11,7 +11,7 @@
 $(document).ready(function() {
   $(".livepreview").livePreview({
     trigger: 'hover',
-    scale: '0.6', 
+    scale: '0.6',
   });
 });
 </script>
