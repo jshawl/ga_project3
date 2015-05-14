@@ -89,10 +89,12 @@
   background-repeat: no-repeat;
 }
 
+
 .search-index{
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 70px;
 }
 
 .searcher{
@@ -127,6 +129,7 @@
   border:0;
   border-radius:5px;
   font-size: 20px;
+  margin-top: 10px;
 }
 
 .favorite-show {

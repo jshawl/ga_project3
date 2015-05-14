@@ -12,9 +12,12 @@ class FavoritesController < ApplicationController
 
   def create
   @favorite = current_user.favorites.new(favorite_params)
+  # @favorite = current_user.favorites.create(favorite_params)
     if @favorite.save
       redirect_to(favorites_path)
+      # redirect_to root_url
       # redirect_to(:back)
+      # return Redirect(ControllerContext.HttpContext.Request.UrlReferrer.ToString());
     else
       render 'new'
     end
