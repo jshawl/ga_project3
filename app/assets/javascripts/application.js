@@ -105,21 +105,22 @@
   });
 })(jQuery);
 
-function listenForNewFavorite(){
-  $("#new_favorite").on("submit", function(event){
-    event.preventDefault();
-    // ajax to create a favorite (POST /favorites)
-    // get unique id for restaurant
-    // POST to /favorites
-    var $restaurant_form = $(event.target);
-    restaurant_data = $restaurant_form.serializeArray();
-
-    jqxhr = $.post("/favorites", restaurant_data)
-    .done(function(){
-      alert("Saved to Favorites! Go to My Favorites to see your Favorite Brunch Spots")
-    })
-    .fail(function(){
-      console.log("Failure saving the new favorite:", restaurant_data)
-    });
-  });
-}
+//This keeps User on the same page...need to update so non-signed in user is directed to log in/sign up
+// function listenForNewFavorite(){
+//   $("#new_favorite").on("submit", function(event){
+//     event.preventDefault();
+//     // ajax to create a favorite (POST /favorites)
+//     // get unique id for restaurant
+//     // POST to /favorites
+//     var $restaurant_form = $(event.target);
+//     restaurant_data = $restaurant_form.serializeArray();
+//
+//     jqxhr = $.post("/favorites", restaurant_data)
+//     .done(function(){
+//       alert("Saved to Favorites! Go to My Favorites to see your Favorite Brunch Spots")
+//     })
+//     .fail(function(){
+//       console.log("Failure saving the new favorite:", restaurant_data)
+//     });
+//   });
+// }
