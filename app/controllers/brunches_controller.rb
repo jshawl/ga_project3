@@ -7,6 +7,8 @@ class BrunchesController < ApplicationController
 	def search
     #@brunch_search = Yelp.client.search('DC', { category_filter: 'breakfast_brunch', limit: 1 })
 		# would rather use neighborhood than zipcode here...
+		# Presumable you could use a geolocator API to convert a neighborhood into a zip code
+		# I would also recommend adding this idea to your readme!
 		location = params[:location]
 	  parameters = { category_filter: 'breakfast_brunch' }
     @brunch_search = Yelp.client.search( location, parameters )

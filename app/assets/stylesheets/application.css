@@ -28,6 +28,7 @@
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
+  # EXCELLENT use of flexbox!!!
   -webkit-flex-flow: row wrap;
   justify-content: flex-start;
 }
@@ -84,6 +85,7 @@
 .site-content {
   flex: 1;
   background-image: url("https://cravedfw.files.wordpress.com/2015/02/pancake1.jpg");
+  # consider downloading this locally so the link doesn't break in the future.
   background-size:cover;
   background-postion:center center;
   background-repeat: no-repeat;
@@ -195,3 +197,5 @@
     -webkit-box-shadow: inset 5 5px 10px #666;
 
 }
+
+# CSS looks great! consider using classes instead of ID's for selecting.

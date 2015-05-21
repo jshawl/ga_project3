@@ -20,6 +20,9 @@ class FavoritesController < ApplicationController
         format.html { redirect_to(:back) }
       end
       # return Redirect(ControllerContext.HttpContext.Request.UrlReferrer.ToString());
+      # ^^ was this trying to remember the save even if the user is not logged in?
+      # What didn't work?
+      # Also, try using branches instead to maintain experimental code instead of commenting.
     else
       render 'new'
     end

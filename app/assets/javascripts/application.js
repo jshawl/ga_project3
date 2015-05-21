@@ -104,8 +104,10 @@
      }
   });
 })(jQuery);
+// nice job implementing this jquery plugin!
 
 //This keeps User on the same page...need to update so non-signed in user is directed to log in/sign up
+// please remove commented out code in the future.
 // function listenForNewFavorite(){
 //   $("#new_favorite").on("submit", function(event){
 //     event.preventDefault();
